@@ -3,21 +3,22 @@
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-      "jdkDistro": "amzn",
+			"jdkDistro": "amzn",
 			"version": "21",
 			"installMaven": "true"
 		}
 	},
 	"customizations": {
 		"vscode": {
-      "extensions": [
-        "vscjava.vscode-java-pack"
-      ],
+			"extensions": [
+				"vscjava.vscode-java-pack"
+			],
 			"settings": {
-        "editor.fontSize": 13,
-        "editor.minimap.enabled": false,
-        "java.server.launchMode": "Standard"
-      }
+				"editor.fontSize": 13,
+				"editor.minimap.enabled": false,
+				"java.server.launchMode": "Standard",
+				"java.configuration.updateBuildConfiguration": "automatic"
+			}
 		}
 	}
 }
