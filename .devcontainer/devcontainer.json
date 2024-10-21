@@ -16,7 +16,7 @@
 			"settings": {
 				"editor.fontSize": 13,
 				"editor.minimap.enabled": false,
-				"java.server.launchMode": "Standard",
+				"java.server.launchMode": "Standard"
 			}
 		}
 	}
