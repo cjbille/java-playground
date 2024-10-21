@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import com.cjbdevlabs.Calculator;
+
 public class CalculatorTest {
 
     Calculator calculator = new Calculator();

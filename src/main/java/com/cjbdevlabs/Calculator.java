@@ -1,3 +1,5 @@
+package com.cjbdevlabs;
+
 public class Calculator {
     
     public int sum(int x, int y) {
