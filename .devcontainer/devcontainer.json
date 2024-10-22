@@ -1,13 +1,10 @@
 {
-	"name": "JavaPlayground",
+	"name": "JavaPlaygroundPostGres",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"jdkDistro": "amzn",
-			"version": "21",
-			"installMaven": "true"
-		}
-	},
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"forwardPorts": [5432],
 	"customizations": {
 		"vscode": {
 			"extensions": [
