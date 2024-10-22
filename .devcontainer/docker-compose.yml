@@ -1,5 +1,12 @@
 version: '3.8'
 
+volumes:
+  postgres-data:
+
+networks:
+  default:
+    name: java-postgres-net
+
 services:
   app:
     container_name: javadev
@@ -12,10 +19,9 @@ services:
         POSTGRES_DB: postgres
         POSTGRES_HOSTNAME: postgresdb
     volumes:
-      - ../..:/workspaces:cached
+      - ../..:/workspaces:cached 
     command: sleep infinity
     network_mode: service:db
-
   db:
     container_name: postgresdb
     image: postgres:latest
@@ -26,6 +32,5 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
-
-volumes:
-  postgres-data:
+    ports:
+      - "5432:5432"
