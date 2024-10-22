@@ -13,7 +13,7 @@ services:
         POSTGRES_HOSTNAME: postgresdb
     volumes:
       - ../..:/workspaces:cached
-          command: sleep infinity
+    command: sleep infinity
     network_mode: service:db
 
   db:
