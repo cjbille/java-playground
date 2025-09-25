@@ -20,5 +20,10 @@ public class Functions {
     public static Function<Integer, Integer> tripleValueFunc = x -> x * 3;
     public static BiFunction<Integer, Integer, Integer> addValuesFunc = (x, y) -> x + y;
     public static TriFunction<Integer, Integer, Integer, Integer> multipylyValuesFunc = (x, y, z) -> x * y * z;
-
+    public static NoArgFunction<String> noArgFunction = () -> "hello no args!";
+    public static NoArgFunction<NoArgFunction<String>> createGreaterFunc = () -> {
+        var name = "Chris";
+        return () -> "Hello " + name;
+    };
+    public static NoArgFunction<String> greeterFunc = createGreaterFunc.apply();
 }
