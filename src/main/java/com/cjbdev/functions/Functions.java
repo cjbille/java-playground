@@ -1,6 +1,10 @@
 package com.cjbdev.functions;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 /**
@@ -26,4 +30,13 @@ public class Functions {
         return () -> "Hello " + name;
     };
     public static NoArgFunction<String> greeterFunc = createGreaterFunc.apply();
+
+    public static void countDown(Integer x) {
+        if (x < 0) {
+            System.out.println("Done count down!");
+            return;
+        }
+        System.out.println("The count is: " + x);
+        countDown(x - 1);
+    }
 }
